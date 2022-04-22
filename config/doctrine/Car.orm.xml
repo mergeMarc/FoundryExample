@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping
+                          http://www.doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+
+    <embeddable name="App\Entity\Car">
+        <embedded name="icEngine" class="App\Entity\IcEngine"/>
+        <field name="name" type="string" length="190"/>
+        <field name="seats" type="smallint">
+            <options>
+                <option name="unsigned">true</option>
+            </options>
+        </field>
+    </embeddable>
+
+</doctrine-mapping>
